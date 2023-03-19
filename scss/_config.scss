@@ -1,0 +1,14 @@
+$primary-color: hsl(218, 23%, 16%);
+$secondary-color: hsl(217, 19%, 24%);
+$tritiary-color: hsl(150, 100%, 66%);
+$text-color: hsl(193, 38%, 86%);
+
+@mixin transition {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin mobile-screen {
+  @media screen and (max-width: 523px) {
+    @content;
+  }
+}
