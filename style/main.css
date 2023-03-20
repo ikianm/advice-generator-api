@@ -43,22 +43,34 @@ body main #divider {
 body main #divider img {
   width: 76%;
 }
-body main button {
+body main #button-wrapper {
   position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   top: 18rem;
-  left: 14rem;
+}
+body main #button-wrapper button {
   background-color: hsl(150, 100%, 66%);
   border-radius: 50%;
   padding: 20px 20px;
   border: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   transition: all 0.5s ease-in-out;
 }
-body main button.coolDown:hover {
+body main #button-wrapper button.coolDown:hover {
   box-shadow: none !important;
 }
-body main button:hover {
+body main #button-wrapper button:hover {
   box-shadow: 0.5px 0.5px 25px 10px hsl(150, 100%, 66%);
+}
+body main #button-wrapper button:focus {
+  outline: none !important;
 }
 
 @media screen and (max-width: 523px) {
@@ -69,7 +81,10 @@ body main button:hover {
     width: 95%;
     height: 22rem;
   }
-  body main button {
-    left: 9.2rem;
+  body main section {
+    height: 12rem;
+  }
+  body main #button-wrapper {
+    top: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */

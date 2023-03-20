@@ -1,9 +1,17 @@
 const generateBtn = document.querySelector('button');
+
 const getAdvice = async () => {
   const p = document.getElementById('advice');
   const id = document.querySelector('h3');
   const response = await fetch('https://api.adviceslip.com/advice');
   const data = await response.json();
+
+  if (data.slip.advice.length >= 94) {
+    p.style.fontSize = '24px';
+  } else {
+    p.style.fontSize = '28px';
+  }
+  
   id.textContent = `ADVICE #${data.slip.id}`;
   p.textContent = `" ${data.slip.advice} "`;
   btnStyle(false);

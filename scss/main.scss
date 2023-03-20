@@ -48,24 +48,41 @@ body {
       }
     }
 
-    button {
+    #button-wrapper {
       position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
       top: 18rem;
-      left: 14rem;
-      background-color: $tritiary-color;
-      border-radius: 50%;
-      padding: 20px 20px;
-      border: none;
-      cursor: pointer;
-      @include transition;
 
-      &.coolDown {
-        &:hover {
-          box-shadow: none !important;
+      button {
+        background-color: $tritiary-color;
+        border-radius: 50%;
+        padding: 20px 20px;
+        border: none;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include transition;
+
+        &.coolDown {
+          &:hover {
+            box-shadow: none !important;
+          }
         }
-      }
-      &:hover {
-        box-shadow: 0.5px 0.5px 25px 10px $tritiary-color;
+
+        &:hover {
+          box-shadow: 0.5px 0.5px 25px 10px $tritiary-color;
+        }
+
+        &:focus {
+          outline: none !important;
+        }
       }
     }
   }
@@ -78,8 +95,12 @@ body {
       width: 95%;
       height: 22rem;
 
-      button {
-        left: 9.2rem;
+      section {
+        height: 12rem;
+      }
+
+      #button-wrapper {
+        top: 20rem;
       }
     }
   }
